@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio Pack - Vibe Coding Series #1</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0A0A0B;
+            --surface: #141416;
+            --accent: #2E79FF;
+            --highlight: #CCFF00;
+            --text-main: #FFFFFF;
+            --text-dim: #88888E;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+
+        .pricing-card {
+            background: linear-gradient(145deg, #1A1A1E 0%, #0F0F12 100%);
+            border: var(--glass-border);
+            border-radius: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(46, 121, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .cta-button {
+            background: var(--accent);
+            box-shadow: 0 0 20px rgba(46, 121, 255, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 30px rgba(46, 121, 255, 0.6);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="max-w-6xl mx-auto px-6 py-24">
+        <!-- Badge -->
+        <div class="flex justify-center mb-8">
+            <span class="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-[0.2em] text-highlight uppercase">
+                Vibe Coding Assets Vol. 01
+            </span>
+        </div>
+
+        <!-- Header -->
+        <div class="text-center mb-20">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
+                AI Portfolio <span class="text-accent italic">Vibe Pack.</span>
+            </h1>
+            <p class="text-xl text-text-dim max-w-2xl mx-auto leading-relaxed">
+                비개발자를 위한 1분 완성 프리미엄 포트폴리오. <br>
+                코드가 아닌 <b>'워크플로우'</b>를 소유하고 즉시 전문성을 증명하세요.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Product Preview Image placeholder -->
+            <div class="rounded-3xl border border-white/10 bg-surface aspect-video flex items-center justify-center relative overflow-hidden group">
+                <div class="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <p class="text-sm font-medium text-text-dim group-hover:text-white transition-colors">[ 템플릿 쇼룸 미리보기 이미지 ]</p>
+            </div>
+
+            <!-- Pricing / Purchase -->
+            <div class="pricing-card p-10 md:p-12">
+                <div class="flex justify-between items-start mb-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-1 text-highlight">Standard License</h3>
+                        <p class="text-sm text-text-dim">Commercial use included</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-4xl font-bold">$29</span>
+                        <p class="text-[10px] text-text-dim uppercase tracking-widest mt-1">One-time payment</p>
+                    </div>
+                </div>
+
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-center text-sm">
+                        <svg class="w-4 h-4 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        프리미엄 벤토 그리드 (HTML/CSS)
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <svg class="w-4 h-4 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        디자인 제어 토큰 (`vibe-tokens.json`)
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <svg class="w-4 h-4 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <b>[핵심]</b> Cursor/OpenClaw 전용 커스텀 프롬프트 팩
+                    </li>
+                    <li class="flex items-center text-sm">
+                        <svg class="w-4 h-4 text-accent mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        Cloudflare Pages 원클릭 배포 가이드
+                    </li>
+                </ul>
+
+                <button class="cta-button w-full py-4 rounded-2xl font-bold text-white mb-4">
+                    Get Vibe Pack Now
+                </button>
+                <p class="text-[10px] text-center text-text-dim">Secure checkout by Gumroad / Stripe</p>
+            </div>
+        </div>
+
+        <!-- How it works -->
+        <div class="mt-32 text-center">
+            <h2 class="text-3xl font-bold mb-16">How Vibe Coding Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/5">
+                    <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-6 mx-auto">1</div>
+                    <h4 class="font-bold mb-3">Buy Pack</h4>
+                    <p class="text-sm text-text-dim">디자인 토큰과 로직 설계도를 다운로드합니다.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/5">
+                    <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-6 mx-auto">2</div>
+                    <h4 class="font-bold mb-3">Copy Prompt</h4>
+                    <p class="text-sm text-text-dim">제공된 시스템 프롬프트를 Cursor에 입력합니다.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-white/5 border border-white/5">
+                    <div class="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold mb-6 mx-auto">3</div>
+                    <h4 class="font-bold mb-3">Vibe Update</h4>
+                    <p class="text-sm text-text-dim">AI가 당신의 경력을 분석해 사이트를 자동 완성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

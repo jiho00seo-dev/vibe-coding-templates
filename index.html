@@ -6,22 +6,14 @@
     <title>AI Portfolio Premium - AI Specialist Persona</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        /* Mobile Redirection */
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = "mobile.html";
+        }
+    </script>
     <style>
         :root {
-            --bg-main: #0F0F12;
-            --surface: #1A1A1E;
-            --accent-blue: #2E79FF;
-            --highlight-lime: #CCFF00;
-            --text-primary: #FFFFFF;
-            --text-secondary: #9CA3AF;
-            --font-heading: 'Outfit', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --glass-bg: rgba(255, 255, 255, 0.03);
-            --glass-blur: blur(12px);
-            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-            --neon-blue: 0 0 20px rgba(46, 121, 255, 0.4);
-            --bento-radius: 24px;
-        }
 
         body {
             background-color: var(--bg-main);
@@ -170,12 +162,12 @@
                 </div>
                 <p class="text-text-secondary text-sm mb-6">고성능 AI 연산을 위해 제가 실제로 사용하고 추천하는 장비들입니다.</p>
                 <div class="grid grid-cols-2 gap-4">
-                    <div onclick="window.open('https://link.coupang.com/a/custom-link', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
+                    <div onclick="window.open('https://www.coupang.com/np/search?q=RTX4090+Workstation', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
                         <p class="text-xs text-text-secondary mb-1">Deep Learning PC</p>
                         <p class="text-sm font-bold mb-2">RTX 4090 Workstation</p>
                         <span class="text-[10px] text-accent-blue font-bold group-hover:underline">구매처 확인 →</span>
                     </div>
-                    <div onclick="window.open('https://link.coupang.com/a/custom-link', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
+                    <div onclick="window.open('https://www.coupang.com/np/search?q=Ultra-wide+5K+Monitor', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
                         <p class="text-xs text-text-secondary mb-1">Productivity</p>
                         <p class="text-sm font-bold mb-2">Ultra-wide 5K Monitor</p>
                         <span class="text-[10px] text-accent-blue font-bold group-hover:underline">구매처 확인 →</span>

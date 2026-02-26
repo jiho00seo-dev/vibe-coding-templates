@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
+  
+  --color-background: var(--bg-main);
+  --color-surface: var(--surface);
+  --color-accent-blue: var(--accent-blue);
+  --color-highlight-lime: var(--highlight-lime);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  
+  --radius-bento: var(--bento-radius);
+}
+
+:root {
+  --bg-main: #0F0F12;
+  --surface: #1A1A1E;
+  --accent-blue: #2E79FF;
+  --highlight-lime: #CCFF00;
+  --text-primary: #FFFFFF;
+  --text-secondary: #9CA3AF;
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-blur: blur(12px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  
+  --neon-blue: 0 0 20px rgba(46, 121, 255, 0.5);
+  --neon-lime: 0 0 20px rgba(204, 255, 0, 0.5);
+  
+  --bento-radius: 24px;
+  --bento-gap: 24px;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.glass-nav {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: var(--glass-border);
+}
+
+.bento-grid {
+  display: grid;
+  gap: var(--bento-gap);
+}
+
+.bento-item {
+  background: var(--surface);
+  border-radius: var(--bento-radius);
+  border: var(--glass-border);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.bento-item:hover {
+  border-color: var(--accent-blue);
+  box-shadow: var(--neon-blue);
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI.CORE | Premium Portfolio</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        /* Mobile Redirection */
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            window.location.href = "mobile_en.html";
+        }
+    </script>
+    <style>
+        :root {
+            --bg-main: #0F0F12;
+            --surface: #1A1A1E;
+            --accent-blue: #2E79FF;
+            --highlight-lime: #CCFF00;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9CA3AF;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-blur: blur(12px);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+            --neon-blue: 0 0 20px rgba(46, 121, 255, 0.4);
+            --bento-radius: 24px;
+        }
+
+        body {
+            background-color: var(--bg-main) !important;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            margin: 0;
+        }
+
+        h1, h2, h3 { font-family: var(--font-heading); }
+
+        .glass-nav {
+            background: rgba(15, 15, 18, 0.8);
+            backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            z-index: 50;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .bento-item {
+            background: var(--surface);
+            border-radius: var(--bento-radius);
+            border: var(--glass-border);
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-item:hover {
+            border-color: var(--accent-blue);
+            box-shadow: var(--neon-blue);
+            transform: translateY(-5px);
+        }
+
+        .custom-cursor {
+            width: 20px; height: 20px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            transition: transform 0.1s ease;
+            z-index: 100;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, var(--text-primary), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-[#0F0F12]">
+    <div class="custom-cursor" id="cursor"></div>
+
+    <nav class="glass-nav fixed top-0 w-full px-8 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">AI.CORE</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#about" class="hover:text-accent-blue transition-colors text-white">About</a>
+            <a href="#projects" class="hover:text-accent-blue transition-colors text-white">Projects</a>
+            <a href="#gear" class="hover:text-accent-blue transition-colors text-white">Gear</a>
+            <a href="#contact" class="hover:text-accent-blue transition-colors text-white">Contact</a>
+        </div>
+        <button class="bg-accent-blue text-white px-6 py-2 rounded-full text-sm font-bold hover:opacity-80 transition-all">Hire Me</button>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <section id="about" class="mb-24">
+            <div class="inline-block px-4 py-1 rounded-full border border-glass-border text-xs font-bold text-highlight-lime mb-6 tracking-widest uppercase">
+                Available for Global Challenges
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 tracking-tight leading-tight text-white">
+                Architecting <span class="text-gradient">Intelligence</span> <br /> 
+                for the Next Decade.
+            </h1>
+            <p class="text-xl text-text-secondary max-w-2xl leading-relaxed">
+                Hello! I am a <b>Full-Stack AI Specialist</b> bridging the gap between 
+                model architecture and human-centric design. <br>
+                From LLM optimization to intuitive agent interfaces, I deliver innovation 
+                that scales across borders.
+            </p>
+        </section>
+
+        <section id="projects" class="bento-grid">
+            <div class="bento-item col-span-2 md:col-span-2 md:row-span-2 flex flex-col justify-end min-h-[400px]">
+                <div class="text-highlight-lime text-xs font-bold tracking-widest uppercase mb-2">Featured Research</div>
+                <h3 class="text-4xl font-bold mb-4 text-white">Neural Harmony Engine</h3>
+                <p class="text-text-secondary mb-6 leading-relaxed">
+                    A neural engine that generates real-time, context-aware soundtracks for video. 
+                    Trained on 10,000+ hours of high-fidelity audio.
+                </p>
+                <div class="flex space-x-3">
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-text-secondary uppercase">PyTorch</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-text-secondary uppercase">Next.js</span>
+                </div>
+            </div>
+
+            <div class="bento-item flex flex-col justify-center items-center text-center">
+                <div class="text-5xl font-bold text-accent-blue mb-2">50+</div>
+                <p class="text-text-secondary text-xs uppercase tracking-widest font-bold">Models Optimized</p>
+            </div>
+
+            <div class="bento-item col-span-2 md:col-span-1">
+                <h3 class="text-xl font-bold mb-3 text-white">AI Agent Architect</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                    Designing multi-agent systems that automate complex business processes. 
+                    Proven efficiency gains of over 300%.
+                </p>
+            </div>
+
+            <div id="gear" class="bento-item col-span-2 md:col-span-2 bg-gradient-to-br from-surface to-[#242429]">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-2">The Setup</div>
+                        <h3 class="text-2xl font-bold text-white">Curated for AI Devs</h3>
+                    </div>
+                </div>
+                <p class="text-text-secondary text-sm mb-6">Professional hardware curated for high-performance AI workloads.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div onclick="window.open('https://www.amazon.com/s?k=RTX+4090+Workstation', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
+                        <p class="text-xs text-text-secondary mb-1">Deep Learning</p>
+                        <p class="text-sm font-bold mb-2 text-white">RTX 4090 Station</p>
+                        <span class="text-[10px] text-accent-blue font-bold group-hover:underline">Check Price →</span>
+                    </div>
+                    <div onclick="window.open('https://www.amazon.com/s?k=5K+Monitor', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
+                        <p class="text-xs text-text-secondary mb-1">Productivity</p>
+                        <p class="text-sm font-bold mb-2 text-white">5K Ultra-wide</p>
+                        <span class="text-[10px] text-accent-blue font-bold group-hover:underline">Check Price →</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-item flex flex-col justify-center items-center text-center">
+                <div class="text-5xl font-bold text-highlight-lime mb-2">12</div>
+                <p class="text-text-secondary text-xs uppercase tracking-widest font-bold">Research Papers</p>
+            </div>
+
+            <div class="bento-item col-span-2 md:col-span-1">
+                <h3 class="text-xl font-bold mb-3 text-white">Vibe Coding Lab</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                    Developing experimental tools for real-time prompt optimization and coding styles.
+                </p>
+            </div>
+        </section>
+
+        <footer id="contact" class="mt-32 pt-12 border-t border-glass-border flex flex-col md:flex-row justify-between items-center text-text-secondary text-sm">
+            <p>© 2026 AI.CORE Specialist. All rights reserved.</p>
+            <div class="flex space-x-6 mt-6 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Github</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+        });
+    </script>
+</body>
+</html>

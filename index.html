@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Portfolio Premium - AI Specialist Persona</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0F0F12;
+            --surface: #1A1A1E;
+            --accent-blue: #2E79FF;
+            --highlight-lime: #CCFF00;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9CA3AF;
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-blur: blur(12px);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+            --neon-blue: 0 0 20px rgba(46, 121, 255, 0.4);
+            --bento-radius: 24px;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 { font-family: var(--font-heading); }
+
+        .glass-nav {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            border-bottom: var(--glass-border);
+            z-index: 50;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .bento-item {
+            background: var(--surface);
+            border-radius: var(--bento-radius);
+            border: var(--glass-border);
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-item:hover {
+            border-color: var(--accent-blue);
+            box-shadow: var(--neon-blue);
+            transform: translateY(-5px);
+        }
+
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(46, 121, 255, 0.05));
+            pointer-events: none;
+        }
+
+        .custom-cursor {
+            width: 20px; height: 20px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            mix-blend-mode: difference;
+            transition: transform 0.1s ease;
+            z-index: 100;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, var(--text-primary), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="custom-cursor" id="cursor"></div>
+
+    <nav class="glass-nav fixed top-0 w-full px-8 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold tracking-tighter">AI.CORE</div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="#about" class="hover:text-accent-blue transition-colors">About</a>
+            <a href="#projects" class="hover:text-accent-blue transition-colors">Projects</a>
+            <a href="#gear" class="hover:text-accent-blue transition-colors">Gear</a>
+            <a href="#contact" class="hover:text-accent-blue transition-colors">Contact</a>
+        </div>
+        <button class="bg-accent-blue text-white px-6 py-2 rounded-full text-sm font-bold hover:opacity-80 transition-all">Hire Me</button>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <!-- Hero Section -->
+        <section id="about" class="mb-24">
+            <div class="inline-block px-4 py-1 rounded-full border border-glass-border text-xs font-bold text-highlight-lime mb-6 tracking-widest uppercase">
+                Available for New Challenges
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 tracking-tight leading-tight">
+                Architecting <span class="text-gradient">Intelligence</span> <br /> 
+                for the Next Decade.
+            </h1>
+            <p class="text-xl text-text-secondary max-w-2xl leading-relaxed">
+                안녕하세요! 저는 AI 모델 아키텍처와 인간 중심의 디자인을 결합하여 
+                실질적인 가치를 창출하는 <b>Full-Stack AI Specialist</b>입니다. <br>
+                대규모 언어 모델(LLM) 최적화부터 직관적인 에이전트 인터페이스까지, 
+                기술의 경계를 넘나들며 혁신적인 솔루션을 제안합니다.
+            </p>
+        </section>
+
+        <!-- Bento Grid -->
+        <section id="projects" class="bento-grid">
+            <!-- Large Project -->
+            <div class="bento-item col-span-2 md:col-span-2 md:row-span-2 flex flex-col justify-end min-h-[400px]">
+                <div class="text-highlight-lime text-xs font-bold tracking-widest uppercase mb-2">Featured Research</div>
+                <h3 class="text-4xl font-bold mb-4">Neural Harmony Engine</h3>
+                <p class="text-text-secondary mb-6 leading-relaxed">
+                    음악적 화성학과 신경망을 결합하여 실시간으로 영상에 최적화된 배경음악을 생성하는 AI 엔진입니다. 
+                    10,000시간 이상의 고음질 오디오 데이터를 학습하여 감성적인 뉘앙스를 재현합니다.
+                </p>
+                <div class="flex space-x-3">
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-text-secondary uppercase">PyTorch</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-text-secondary uppercase">Next.js</span>
+                    <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-[10px] text-text-secondary uppercase">Web Audio API</span>
+                </div>
+            </div>
+
+            <!-- Stats 1 -->
+            <div class="bento-item flex flex-col justify-center items-center text-center">
+                <div class="text-5xl font-bold text-accent-blue mb-2">50+</div>
+                <p class="text-text-secondary text-xs uppercase tracking-widest font-bold">Models Optimized</p>
+            </div>
+
+            <!-- Experience Card -->
+            <div class="bento-item col-span-2 md:col-span-1">
+                <h3 class="text-xl font-bold mb-3">AI Agent Architect</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                    비즈니스 프로세스를 자동화하는 멀티 에이전트 시스템을 설계합니다. 
+                    효율성을 300% 이상 증대시킨 실무 경험을 보유하고 있습니다.
+                </p>
+            </div>
+
+            <!-- Gear Section (Affiliate Focus) -->
+            <div id="gear" class="bento-item col-span-2 md:col-span-2 bg-gradient-to-br from-surface to-[#242429]">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <div class="text-accent-blue text-xs font-bold tracking-widest uppercase mb-2">The Setup</div>
+                        <h3 class="text-2xl font-bold">Curated for AI Devs</h3>
+                    </div>
+                    <div class="bg-highlight-lime text-black p-2 rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    </div>
+                </div>
+                <p class="text-text-secondary text-sm mb-6">고성능 AI 연산을 위해 제가 실제로 사용하고 추천하는 장비들입니다.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div onclick="window.open('https://link.coupang.com/a/custom-link', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
+                        <p class="text-xs text-text-secondary mb-1">Deep Learning PC</p>
+                        <p class="text-sm font-bold mb-2">RTX 4090 Workstation</p>
+                        <span class="text-[10px] text-accent-blue font-bold group-hover:underline">구매처 확인 →</span>
+                    </div>
+                    <div onclick="window.open('https://link.coupang.com/a/custom-link', '_blank')" class="p-4 bg-white/5 rounded-xl border border-white/5 hover:border-accent-blue transition-all cursor-pointer group">
+                        <p class="text-xs text-text-secondary mb-1">Productivity</p>
+                        <p class="text-sm font-bold mb-2">Ultra-wide 5K Monitor</p>
+                        <span class="text-[10px] text-accent-blue font-bold group-hover:underline">구매처 확인 →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Papers -->
+            <div class="bento-item flex flex-col justify-center items-center text-center">
+                <div class="text-5xl font-bold text-highlight-lime mb-2">12</div>
+                <p class="text-text-secondary text-xs uppercase tracking-widest font-bold">Research Papers</p>
+            </div>
+
+            <!-- Lab -->
+            <div class="bento-item col-span-2 md:col-span-1">
+                <h3 class="text-xl font-bold mb-3">Vibe Coding Lab</h3>
+                <p class="text-text-secondary text-sm leading-relaxed">
+                    실시간으로 코딩 스타일을 분석하고 최적화된 프롬프트를 제안하는 실험적인 도구들을 개발 중입니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="mt-32 pt-12 border-t border-glass-border flex flex-col md:flex-row justify-between items-center text-text-secondary text-sm">
+            <p>© 2026 AI.CORE Specialist. All rights reserved.</p>
+            <div class="flex space-x-6 mt-6 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors">Github</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">Twitter</a>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+        });
+
+        document.querySelectorAll('a, button, .bento-item').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.style.transform += ' scale(2.5)');
+            el.addEventListener('mouseleave', () => cursor.style.transform = cursor.style.transform.replace(' scale(2.5)', ''));
+        });
+    </script>
+</body>
+</html>

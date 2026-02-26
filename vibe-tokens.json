@@ -1,0 +1,45 @@
+{
+  "name": "AI Portfolio Premium Design System",
+  "version": "1.0.0",
+  "typography": {
+    "heading": "Outfit, sans-serif",
+    "body": "Inter, sans-serif"
+  },
+  "colors": {
+    "background": "#0F0F12",
+    "surface": "#1A1A1E",
+    "accent-blue": "#2E79FF",
+    "highlight-lime": "#CCFF00",
+    "text-primary": "#FFFFFF",
+    "text-secondary": "#9CA3AF"
+  },
+  "glassmorphism": {
+    "bg": "rgba(255, 255, 255, 0.03)",
+    "border": "1px solid rgba(255, 255, 255, 0.08)",
+    "blur": "12px",
+    "shadow": "0 8px 32px 0 rgba(0, 0, 0, 0.37)"
+  },
+  "neon": {
+    "blue": "0 0 15px rgba(46, 121, 255, 0.4), 0 0 30px rgba(46, 121, 255, 0.2)",
+    "lime": "0 0 15px rgba(204, 255, 0, 0.4), 0 0 30px rgba(204, 255, 0, 0.2)"
+  },
+  "bento": {
+    "gap": "1.5rem",
+    "radius": "24px",
+    "padding": "2rem"
+  },
+  "css_variables": {
+    "--bg-main": "#0F0F12",
+    "--accent-blue": "#2E79FF",
+    "--highlight-lime": "#CCFF00",
+    "--font-heading": "'Outfit', sans-serif",
+    "--font-body": "'Inter', sans-serif",
+    "--glass-bg": "rgba(255, 255, 255, 0.03)",
+    "--glass-blur": "blur(12px)",
+    "--glass-border": "1px solid rgba(255, 255, 255, 0.08)",
+    "--neon-blue": "0 0 20px rgba(46, 121, 255, 0.5)",
+    "--neon-lime": "0 0 20px rgba(204, 255, 0, 0.5)",
+    "--bento-radius": "24px",
+    "--bento-gap": "24px"
+  }
+}
